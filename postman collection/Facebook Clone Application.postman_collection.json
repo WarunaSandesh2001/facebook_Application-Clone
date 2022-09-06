@@ -8,7 +8,27 @@
 		{
 			"name": "User",
 			"item": [
-
+				{
+					"name": "Login User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/users/warunasandesh2001@gmail.com/12345",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"warunasandesh2001@gmail.com",
+								"12345"
+							]
+						}
+					},
+					"response": []
+				},
 				{
 					"name": "Save User",
 					"request": {
@@ -16,7 +36,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"firstName\":\"waruna\",\n    \"surname\":\"Sandesh\",\n    \"gender\":\"male\",\n    \"dateOfBirth\":\"2001/02/08\",\n    \"password\":\"1234\",\n    \"phoneNumber\":\"0713562356\",\n    \"email\":\"warunasandesh2001@gmail.com\"\n}",
+							"raw": "{\n    \"firstName\":\"Waruna\",\n    \"surname\":\"Sandesh\",\n    \"gender\":\"male\",\n    \"dateOfBirth\":\"2001/02/08\",\n    \"password\":\"1234\",\n    \"phoneNumber\":\"0713562356\",\n    \"email\":\"warunasandesh2001@gmail.com\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -32,6 +52,26 @@
 							"port": "4000",
 							"path": [
 								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/users/63087ed82e40566515392cbc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"63087ed82e40566515392cbc"
 							]
 						}
 					},
@@ -92,26 +132,6 @@
 					"response": []
 				},
 				{
-					"name": "Search User",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:4000/users/63087ed82e40566515392cbc",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "4000",
-							"path": [
-								"users",
-								"63087ed82e40566515392cbc"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Get All Users",
 					"request": {
 						"method": "GET",
@@ -125,27 +145,6 @@
 							"port": "4000",
 							"path": [
 								"users"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Login User",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:4000/users/warunasandesh2001@gmail.com/12345",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "4000",
-							"path": [
-								"users",
-								"warunasandesh2001@gmail.com",
-								"12345"
 							]
 						}
 					},
