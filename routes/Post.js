@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
         const response = await post.save()
         res.json(response)
     } catch (e) {
-        res.send("Err : " + e)
+        res.send("Error : " + e)
     }
 })
 
@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
         const posts = await Post.find()
         res.json(posts)
     } catch (e) {
-        res.send("Err : " + e)
+        res.send("Error : " + e)
     }
 })
 
@@ -45,7 +45,7 @@ router.put('/:id', async (req, res) => {
 
         res.json(response)
     } catch (e) {
-        res.send("Err : " + e)
+        res.send("Error : " + e)
     }
 })
 
@@ -63,7 +63,7 @@ router.get('/get/:userId', async (req, res) => {
         const posts = await Post.find({"userId" : req.params.userId})
         res.json(posts)
     } catch (e) {
-        res.send("Err : " + e)
+        res.send("Error : " + e)
     }
 })
 
@@ -72,7 +72,7 @@ router.get('/:id', async (req, res) => {
         const post = await Post.findById(req.params.id);
         res.json(post)
     } catch (e) {
-        res.send("Err : " + e)
+        res.send("Error : " + e)
     }
 })
 module.exports = router
