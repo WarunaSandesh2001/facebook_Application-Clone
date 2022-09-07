@@ -31,23 +31,7 @@ router.get('/', async (req, res) => {
     }
 })
 
-router.put('/:id', async (req, res) => {
-    try {
-        const post = await Post.findById(req.params.id);
 
-        post.userId = req.body.userId
-        post.date = req.body.date
-        post.time = req.body.time
-        post.title = req.body.title
-        post.body = req.body.body
-
-        const response = await post.save()
-
-        res.json(response)
-    } catch (e) {
-        res.send("Error : " + e)
-    }
-})
 
 router.delete('/', async (req, res) => {
     try {
@@ -55,6 +39,25 @@ router.delete('/', async (req, res) => {
         res.json(post)
     } catch (e) {
         res.send("Err : " + e)
+    }
+})
+
+router.put('/:id', async (req, res) => {
+    try {
+        const post = await Post.findById(req.params.id);
+
+        post.userId = req.body.userId
+        post.title = req.body.title
+        post.body = req.body.body
+        post.date = req.body.date
+        post.time = req.body.time
+
+
+        const response = await post.save()
+
+        res.json(response)
+    } catch (e) {
+        res.send("Error : " + e)
     }
 })
 
